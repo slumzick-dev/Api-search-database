@@ -1,0 +1,9 @@
+uvicorn api_server_v2:app --reload
+
+http://127.0.0.1:8000/search?q=facebook&mode=clean&d=1
+http://127.0.0.1:8000/search?q=facebook.com&limit=100
+http://127.0.0.1:8000/export?q=facebook.com&mode=raw&d=0
+
+uvicorn api_server_v2_multi_match:app --reload
+vps
+uvicorn api_server_v2_multi_match:app --host 0.0.0.0 --port 8000
